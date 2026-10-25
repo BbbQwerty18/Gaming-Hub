@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Твой Игровой Портал</title>
+    <style>
+        /* Общие настройки стиля */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0b071e; /* Глубокий темно-фиолетовый фон */
+            color: #eeeeee;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Шапка сайта */
+        header {
+            background: linear-gradient(135deg, #1a0f3c 0%, #2d1b6b 100%);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 3px solid #8a2be2;
+            box-shadow: 0 5px 25px rgba(138, 43, 226, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #00ffff; /* Неоново-голубой акцент */
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: #bfa3ff;
+            font-size: 1.1rem;
+        }
+
+        /* Главный контейнер с кнопками-вкладками */
+        .grid-container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            width: 100%;
+        }
+
+        /* Стиль игровых карточек-кнопок */
+        .nav-card {
+            background: #140d30;
+            border: 2px solid #4b148c;
+            border-radius: 12px;
+            padding: 35px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            
+            /* Плавность анимации возврата в исходное состояние */
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Иконки или заглушки внутри кнопок */
+        .nav-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* АНИМАЦИЯ И ПОДСВЕТКА ПРИ НАВЕДЕНИИ */
+        .nav-card:hover {
+            transform: translateY(-8px); /* Приподнимание кнопки */
+            background: #251654;
+            border-color: #00ffff; /* Смена цвета рамки на неоновый */
+            
+            /* Эффект мощного фиолетово-голубого свечения */
+            box-shadow: 0 0 25px rgba(138, 43, 226, 0.8), 
+                        0 0 10px rgba(0, 255, 255, 0.5);
+            color: #00ffff;
+        }
+
+        /* Разные цвета для иконок при наведении (опционально для красоты) */
+        .nav-card:hover .icon {
+            transform: scale(1.15);
+            transition: transform 0.3s ease;
+        }
+
+        /* Подвал */
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 25px;
+            background: #080516;
+            color: #5d4d8c;
+            font-size: 0.9rem;
+            border-top: 1px solid #1a0f3c;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Игровой Хаб</h1>
+        <p>Быстрый доступ к твоим любимым геймерским площадкам и сервисам</p>
+    </header>
+
+    <div class="grid-container">
+        
+        <!-- Вкладка FunPay -->
+        <a href="https://funpay.com" target="_blank" class="nav-card">
+            <span class="icon">💰</span>
+            FunPay Биржа
+        </a>
+
+        <!-- Вкладка Игровые Новости -->
+        <a href="https://playground.ru" target="_blank" class="nav-card">
+            <span class="icon">📰</span>
+            Игровые Новости
+        </a>
+
+        <!-- Вкладка Fortnite -->
+        <a href="https://fortnite.com" target="_blank" class="nav-card">
+            <span class="icon">👑</span>
+            Fortnite
+        </a>
+
+        <!-- Дополнительная вкладка (Бонус) -->
+        <a href="https://steampowered.com" target="_blank" class="nav-card">
+            <span class="icon">🎮</span>
+            Steam Магазин
+        </a>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Gaming Hub | Сделано с неоновой подсветкой</p>
+    </footer>
+
+</body>
+</html>
